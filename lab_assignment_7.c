@@ -12,14 +12,18 @@ int main(){
   printf("\n");
   
   int temp; //for swapping variables
+  int swaps;
   for(int x = 0; x < len; x++){
+      swap = 0;
     for(int y = 0; y < len; y++){
       if(arr[y] > arr[y+1]){
         temp = arr[y];
         arr[y] = arr[y+1];
         arr[y+1] = temp;
+        swaps++;
       }
     }
+      printf("Number of swaps for index %d: %d\n", x, swaps);
   }
   printf("After bubble sort: \n");
   for(int x = 0; x < len; x++){
